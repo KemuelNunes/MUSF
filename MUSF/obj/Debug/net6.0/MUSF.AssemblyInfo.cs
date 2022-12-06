@@ -11,13 +11,13 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("323a25af-8e80-421f-b714-6a5477865627")]
-[assembly: System.Reflection.AssemblyCompanyAttribute("MUSF")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("4f5f6542-2ea4-4b21-b4df-f234bca9dc79")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Musf")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("MUSF")]
-[assembly: System.Reflection.AssemblyTitleAttribute("MUSF")]
+[assembly: System.Reflection.AssemblyProductAttribute("Musf")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Musf")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.

@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["MUSF/MUSF.csproj", "MUSF/"]
-RUN dotnet restore "MUSF/MUSF.csproj"
+COPY ["Musf/Musf.csproj", "Musf/"]
+RUN dotnet restore "Musf/Musf.csproj"
 COPY . .
-WORKDIR "/src/MUSF"
-RUN dotnet build "MUSF.csproj" -c Release -o /app/build
+WORKDIR "/src/Musf"
+RUN dotnet build "Musf.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "MUSF.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "Musf.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "MUSF.dll"]
+ENTRYPOINT ["dotnet", "Musf.dll"]

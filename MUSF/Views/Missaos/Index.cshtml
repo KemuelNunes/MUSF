@@ -1,0 +1,83 @@
+﻿@model IEnumerable<MUSF.Domain.Entities.Missao>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataFim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Objetivo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Envolvidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Etapas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExcluidoEm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExcluidoPor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataFim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Objetivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Envolvidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Etapas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExcluidoEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExcluidoPor)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
